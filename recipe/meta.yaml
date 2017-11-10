@@ -39,7 +39,7 @@ requirements:
     - m2-pkg-config    # [win]
     - m2-libffi >=3.0.0  # [win]
     - m2-gettext-devel         # [win]
-    - m2-zlib 1.2.11     # [win]
+    - m2-zlib      # [win]
     - m2-pcre            # [win]
     - m2-libiconv-devel        # [win]
   run:
@@ -52,7 +52,7 @@ requirements:
     - m2w64-gcc-libs   # [win]
     - m2-libffi >=3.0.0  # [win]
     - m2-gettext         # [win]
-    - m2-zlib 1.2.11     # [win]
+    - m2-zlib      # [win]
     - m2-pcre            # [win]
     - m2-libiconv        # [win]
 

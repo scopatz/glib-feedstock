@@ -8,8 +8,7 @@ SET _PY=%PYTHON%
 SET PYTHON=python
 
 bash configure --prefix %UNIX_PREFIX% --enable-static --enable-shared --disable-documentation ^
-               --with-libiconv gnu ^
-			   -with-python %PYTHON% ^
+               --with-python=%PYTHON% ^
 			   --disable-libmount
 if errorlevel 1 exit 1
 
