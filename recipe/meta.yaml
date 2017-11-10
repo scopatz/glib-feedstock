@@ -22,24 +22,39 @@ source:
 
 build:
   number: 1
-  skip: True  # [win or not py36]
+  skip: True  # [not py36]
   detect_binary_files_with_prefix: True
 
 requirements:
   build:
-    - python
-    - pkg-config
-    - libffi >=3.0.0
-    - gettext
-    - zlib 1.2.11
-    - pcre
-    - libiconv
+    - python 
+    - pkg-config      # [unix]
+    - libffi >=3.0.0  # [unix]
+    - gettext         # [unix]
+    - zlib 1.2.11     # [unix]
+    - pcre            # [unix]
+    - libiconv        # [unix]
+    - posix            # [win]
+    - m2w64-toolchain  # [win]
+    - m2-pkg-config    # [win]
+    - m2-libffi >=3.0.0  # [win]
+    - m2-gettext-devel         # [win]
+    - m2-zlib 1.2.11     # [win]
+    - m2-pcre            # [win]
+    - m2-libiconv-devel        # [win]
   run:
-    - libffi >=3.0.0
-    - gettext
-    - zlib 1.2.11
-    - pcre
-    - libiconv
+    - libffi >=3.0.0  # [unix]
+    - gettext         # [unix]
+    - zlib 1.2.11     # [unix]
+    - pcre            # [unix]
+    - libiconv        # [unix]
+    - posix            # [win]
+    - m2w64-gcc-libs   # [win]
+    - m2-libffi >=3.0.0  # [win]
+    - m2-gettext         # [win]
+    - m2-zlib 1.2.11     # [win]
+    - m2-pcre            # [win]
+    - m2-libiconv        # [win]
 
 test:
   commands:
